@@ -2,9 +2,13 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div style={{ background: "blue", color: "white", padding: "10px" }}>
-      <h2>Dashboard Navbar</h2>
-    </div>
+    <nav className="navbar">
+      <div className="navbar-brand">Student Dashboard</div>
+      <div className="navbar-links">
+        <span className="navbar-link">Overview</span>
+        <span className="navbar-link">Records</span>
+      </div>
+    </nav>
   );
 };
 

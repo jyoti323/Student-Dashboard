@@ -12,20 +12,24 @@ const AddStudent = ({ addStudent }) => {
   };
 
   return (
-    <div className="form">
+    <div className="form add-student-form">
       <input
+        className="add-student-input"
         type="text"
         placeholder="Student name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
       <input
+        className="add-student-input"
         type="number"
         placeholder="Score (0-100)"
         value={score}
         onChange={(e) => setScore(e.target.value)}
       />
-      <button onClick={handleSubmit}>+ ADD</button>
+      <button className="add-student-button" onClick={handleSubmit}>
+        + ADD
+      </button>
     </div>
   );
 };

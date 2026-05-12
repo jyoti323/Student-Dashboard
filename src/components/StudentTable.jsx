@@ -21,6 +21,7 @@ const StudentTable = ({ students, updateScore }) => {
             </td>
             <td>
               <input
+                className="table-score-input"
                 type="number"
                 defaultValue={s.score}
                 onBlur={(e) => updateScore(s.id, e.target.value)}

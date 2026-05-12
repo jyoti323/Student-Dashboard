@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Navbar from "./components/navbar";
 import Header from "./components/header";
 import AddStudent from "./components/AddStudent";
 import Stats from "./components/Stats";
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className="container">
+      <Navbar />
       <Header />
       <AddStudent addStudent={addStudent} />
       <Stats students={students} />
