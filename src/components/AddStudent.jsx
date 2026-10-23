@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddStudent = ({ addStudent }) => {
+const AddStudent = ({ addStudent, students }) => {
   const [name, setName] = useState("");
   const [score, setScore] = useState("");
   const [error, setError] = useState("");
@@ -10,6 +10,7 @@ const AddStudent = ({ addStudent }) => {
     const cleanName = name.trim();
     const numericScore = Number(score);
     if (!cleanName) return setError("Add a name so we know who to cheer for! 💛");
+    if (students.some((student) => student.name.toLowerCase() === cleanName.toLowerCase())) return setError("That learner is already on your class list. ✨");
     if (score === "" || numericScore < 0 || numericScore > 100) return setError("Scores need to be between 0 and 100.");
     addStudent(cleanName, numericScore);
     setName("");

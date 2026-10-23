@@ -53,7 +53,7 @@ function App() {
         <main>
           <Header studentCount={students.length} />
           <Stats students={students} />
-          <AddStudent addStudent={addStudent} />
+          <AddStudent addStudent={addStudent} students={students} />
           <section className="records-section" id="records">
             <div className="section-heading">
               <div>
